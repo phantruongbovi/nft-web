@@ -26,8 +26,19 @@ app.use(express.json());
 app.use("/home", helloRouter);
 //app.use("/api/auth", authRouter);
 
-const PORT = process.env.PORT || 9001;
+const PORT = 4000
 
-app.listen(PORT, console.log(`Server started on port ${PORT}`));
+app.listen(PORT, () => {
+  console.log(`API listening on PORT ${PORT} `)
+})
 
-module.exports = app;
+app.get('/', (req, res) => {
+  res.send('Hey this is my API running 🥳')
+})
+
+app.get('/about', (req, res) => {
+  res.send('This is my about route..... ')
+})
+
+// Export the Express API
+module.exports = app
