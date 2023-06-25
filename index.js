@@ -46,19 +46,19 @@
 // index.js
 require("dotenv").config();
 const express = require("express");
-const connectDB = async () => {
-  try {
-    await require("mongoose").mongoose.connect(process.env.MONGODB_URI);
+// const connectDB = async () => {
+//   try {
+//     await require("mongoose").mongoose.connect(process.env.MONGODB_URI);
 
-    console.log("DB connected");
-  } catch (error) {
-    console.log(error);
-    console.log("loi roii!!!");
-    process.exit(1);
-  }
-};
+//     console.log("DB connected");
+//   } catch (error) {
+//     console.log(error);
+//     console.log("loi roii!!!");
+//     process.exit(1);
+//   }
+// };
 
-connectDB();
+// connectDB();
 
 const app = express();
 const PORT = 4000;
