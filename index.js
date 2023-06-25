@@ -47,21 +47,21 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-const connectDB = async () => {
-  try {
-    await mongoose.connect(
-      `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.czrhoe2.mongodb.net/nft?retryWrites=true&w=majority`
-    );
+// const connectDB = async () => {
+//   try {
+//     await mongoose.connect(
+//       `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.czrhoe2.mongodb.net/nft?retryWrites=true&w=majority`
+//     );
 
-    console.log("DB connected");
-  } catch (error) {
-    console.log(error);
-    console.log("loi roii!!!");
-    process.exit(1);
-  }
-};
+//     console.log("DB connected");
+//   } catch (error) {
+//     console.log(error);
+//     console.log("loi roii!!!");
+//     process.exit(1);
+//   }
+// };
 
-connectDB();
+// connectDB();
 
 const app = express();
 const PORT = 4000;
