@@ -46,12 +46,9 @@
 // index.js
 require("dotenv").config();
 const express = require("express");
-const mongoose = require("mongoose");
 const connectDB = async () => {
   try {
-    await mongoose.connect(
-      `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.czrhoe2.mongodb.net/nft?retryWrites=true&w=majority`
-    );
+    await require("mongoose").mongoose.connect(process.env.MONGODB_URI);
 
     console.log("DB connected");
   } catch (error) {
