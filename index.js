@@ -29,3 +29,5 @@ app.use("/home", helloRouter);
 const PORT = process.env.PORT || 9001;
 
 app.listen(PORT, console.log(`Server started on port ${PORT}`));
+
+module.exports = app;
